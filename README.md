@@ -184,7 +184,9 @@ https://vicidominilab.github.io/
 
 # License
 
-The Time-Tagging Module (TTM) is an aggregation of different parts with different licenses. See details in [LICENSE.md](LICENSE.md) file.  Unless otherwise stated, they are licensed under a CC-BY-NC 4.0, Creative Commons Attribution-NonCommercial 4.0 International License. [![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/)
+The Time-Tagging Module (TTM) is an aggregation of different parts with different licenses. See details in [LICENSE.md](LICENSE.md) file.  Unless otherwise stated, they are licensed under a CC-BY-NC 4.0, Creative Commons Attribution-NonCommercial 4.0 International License.
+
+[![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/)
 
 In addition to the terms of the license, **we ask to acknowledge the use
 of the time-tagging module in scientific articles by citing**:
