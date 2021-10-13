@@ -1,0 +1,3 @@
+#GIT ignore all not ipynb files
+!*.ipynb
+!*.gitignore

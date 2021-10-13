@@ -1,0 +1,9 @@
+#Do NOT ignore the project file
+!*.xpr
+*.cache/**
+*.hw/**
+*.runs/**
+compile_simlib/**
+!ttm.runs/.gitkeep
+!ttm.runs/impl_1/.gitkeep
+!ttm.runs/impl_1/top.bit
