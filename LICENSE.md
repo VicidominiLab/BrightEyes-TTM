@@ -3,7 +3,17 @@
 The Time-Tagging Module (TTM) is an aggregation of different parts with different licenses.
 
 **Unless otherwise stated, they are licensed under a CC-BY-NC 4.0**, 
-Creative Commons Attribution-NonCommercial 4.0 International License. [![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/)
+Creative Commons Attribution-NonCommercial 4.0 International License. 
+
+[![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/)
+
+In addition to the terms of the license, **we ask to acknowledge the use of the time-tagging module in scientific articles by citing**:
+
+```
+The BrightEyes-TTM: an Open-Source Time-Tagging Module for Single-Photon Microscopy
+A. Rossetta, E. Slenders, M. Donato, E. Perego, F. Diotalevi, L. Lanzano', S. V. Koho, G. Tortarolo, M.Crepaldi, G. Vicidomini
+bioRxiv 2021.10.11.463950; doi: https://doi.org/10.1101/2021.10.11.463950
+```
 
 **Please note the following exceptions.**
 
