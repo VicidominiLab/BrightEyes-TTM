@@ -24,8 +24,8 @@ slave FIFO interface https://www.cypress.com/documentation/application-notes/an6
 
 [SYLAP](FPGA/ttm/hdl/sylap/):
 SYLAP (Simulate Your Laser and Photons) is not part of the TTM module as
-it can be disactivated in the top level of the FPGA code. The is has been
-aggregated to the TTM for debugging purpose. The license of SYLAP it is 
+it can be disactivated in the top level of the FPGA code. SYLAP is has been
+aggregated to the TTM only for debugging purpose. The license of SYLAP it is 
 the License GPLv2.1 the original repository is https://github.com/VicidominiLab/SYLAP
 
 [Data Receiver for Linux](dataReceiver/linux/):
