@@ -2,6 +2,7 @@
 !*.xpr
 *.cache/**
 *.hw/**
-*.runs/**
 compile_simlib/**
 !/ttm.runs/impl_1/*.bit
+*.runs/**
+
