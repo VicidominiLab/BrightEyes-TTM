@@ -1,0 +1,226 @@
+### I/Os
+
+
+
+# SMA CONNECTOR ON 7x7ADAPTER
+set_property -dict {PACKAGE_PIN A16 IOSTANDARD LVCMOS25} [get_ports CONN_J2]
+set_property -dict {PACKAGE_PIN A17 IOSTANDARD LVCMOS25} [get_ports CONN_J3]
+
+set_property -dict {PACKAGE_PIN D16 IOSTANDARD LVCMOS25} [get_ports CONN_J4]
+set_property -dict {PACKAGE_PIN C16 IOSTANDARD LVCMOS25} [get_ports CONN_J5]
+
+set_property -dict {PACKAGE_PIN D22 IOSTANDARD LVCMOS25} [get_ports CONN_J6]
+set_property -dict {PACKAGE_PIN C22 IOSTANDARD LVCMOS25} [get_ports CONN_J7]
+
+set_property -dict {PACKAGE_PIN D21 IOSTANDARD LVCMOS25} [get_ports CONN_J8]
+set_property -dict {PACKAGE_PIN C21 IOSTANDARD LVCMOS25} [get_ports CONN_J9]
+
+
+# EXTRA ON 7x7ADAPTER
+set_property -dict {PACKAGE_PIN G17 IOSTANDARD LVCMOS25} [get_ports DETECTOR_VREF1]
+set_property -dict {PACKAGE_PIN F17 IOSTANDARD LVCMOS25} [get_ports DETECTOR_VREF0]
+set_property -dict {PACKAGE_PIN C17 IOSTANDARD LVCMOS25} [get_ports DETECTOR_EN_SPAD]
+#set_property -dict {PACKAGE_PIN B17 IOSTANDARD LVCMOS25} [get_ports {SDA}]
+
+
+
+
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets CHANNELS_P*]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets CHANNELS_N*]
+
+# CONNECTOR ON 7x7ADAPTER
+# OUT21_P LA06_P C10
+set_property -dict {PACKAGE_PIN H30 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[20]}]
+# OUT21_N LA06_N C11
+set_property -dict {PACKAGE_PIN G30 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[20]}]
+# OUT34_P LA10_P C14
+set_property -dict {PACKAGE_PIN D29 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[33]}]
+# OUT34_N LA10_N C15
+set_property -dict {PACKAGE_PIN C30 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[33]}]
+# OUT9_P LA14_P C18
+set_property -dict {PACKAGE_PIN B28 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[8]}]
+# OUT9_N LA14_N C19
+set_property -dict {PACKAGE_PIN A28 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[8]}]
+# OUT8_P LA18_P C22
+set_property -dict {PACKAGE_PIN F21 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[7]}]
+# OUT8_N LA18_N C23
+set_property -dict {PACKAGE_PIN E21 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[7]}]
+# OUT47_P LA27_P C26
+set_property -dict {PACKAGE_PIN C19 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[46]}]
+# OUT47_N LA27_N C27
+set_property -dict {PACKAGE_PIN B19 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[46]}]
+# OUT6_P LA01_P D8
+set_property -dict {PACKAGE_PIN D26 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[5]}]
+# OUT6_N LA01_N D9
+set_property -dict {PACKAGE_PIN C26 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[5]}]
+# OUT1_P LA05_P D11
+set_property -dict {PACKAGE_PIN G29 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[0]}]
+# OUT1_N LA05_N D12
+set_property -dict {PACKAGE_PIN F30 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[0]}]
+# OUT28_P LA09_P D14
+set_property -dict {PACKAGE_PIN B30 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[27]}]
+# OUT28_N LA09_N D15
+set_property -dict {PACKAGE_PIN A30 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[27]}]
+# OUT16_P LA13_P D17
+set_property -dict {PACKAGE_PIN A25 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[15]}]
+# OUT16_N LA13_N D18
+set_property -dict {PACKAGE_PIN A26 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[15]}]
+# OUT29_P LA17_P D20
+set_property -dict {PACKAGE_PIN F20 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[28]}]
+# OUT29_N LA17_N D21
+set_property -dict {PACKAGE_PIN E20 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[28]}]
+# OUT23_P LA23_P D23
+set_property -dict {PACKAGE_PIN B22 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[22]}]
+# OUT23_N LA23_N D24
+set_property -dict {PACKAGE_PIN A22 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[22]}]
+# OUT7_P HA01_P E2
+set_property -dict {PACKAGE_PIN H14 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[6]}]
+# OUT7_N HA01_N E3
+set_property -dict {PACKAGE_PIN G14 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[6]}]
+# OUT3_P HA05_P E6
+set_property -dict {PACKAGE_PIN F15 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[2]}]
+# OUT3_N HA05_N E7
+set_property -dict {PACKAGE_PIN E16 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[2]}]
+# OUT25_P HA09_P E9
+set_property -dict {PACKAGE_PIN F12 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[24]}]
+# OUT25_N HA09_N E10
+set_property -dict {PACKAGE_PIN E13 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[24]}]
+# OUT40_P HA13_P E12
+set_property -dict {PACKAGE_PIN L16 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[39]}]
+# OUT40_N HA13_N E13
+set_property -dict {PACKAGE_PIN K16 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[39]}]
+# OUT43_P HA16_P E15
+set_property -dict {PACKAGE_PIN L15 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[42]}]
+# OUT43_N HA16_N E16
+set_property -dict {PACKAGE_PIN K15 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[42]}]
+# OUT24_P HA20_P E18
+set_property -dict {PACKAGE_PIN K13 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[23]}]
+# OUT24_N HA20_N E19
+set_property -dict {PACKAGE_PIN J13 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[23]}]
+# OUT27_P HA00_P F4
+set_property -dict {PACKAGE_PIN D12 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[26]}]
+# OUT27_N HA00_N F5
+set_property -dict {PACKAGE_PIN D13 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[26]}]
+# OUT13_P HA04_P F7
+set_property -dict {PACKAGE_PIN F11 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[12]}]
+# OUT13_N HA04_N F8
+set_property -dict {PACKAGE_PIN E11 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[12]}]
+# OUT33_P HA08_P F10
+set_property -dict {PACKAGE_PIN E14 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[32]}]
+# OUT33_N HA08_N F11
+set_property -dict {PACKAGE_PIN E15 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[32]}]
+# OUT48_P HA12_P F13
+set_property -dict {PACKAGE_PIN C15 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[47]}]
+# OUT48_N HA12_N F14
+set_property -dict {PACKAGE_PIN B15 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[47]}]
+# OUT22_P HA15_P F16
+set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[21]}]
+# OUT22_N HA15_N F17
+set_property -dict {PACKAGE_PIN G15 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[21]}]
+# OUT36_P HA19_P F19
+set_property -dict {PACKAGE_PIN H11 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[35]}]
+# OUT36_N HA19_N F20
+set_property -dict {PACKAGE_PIN H12 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[35]}]
+# OUT11_P LA00_P G6
+set_property -dict {PACKAGE_PIN C25 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[10]}]
+# OUT11_N LA00_N G7
+set_property -dict {PACKAGE_PIN B25 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[10]}]
+# OUT14_P LA03_P G9
+set_property -dict {PACKAGE_PIN H26 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[13]}]
+# OUT42_P LA08_P G12
+set_property -dict {PACKAGE_PIN E29 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[41]}]
+# OUT42_N LA08_N G13
+set_property -dict {PACKAGE_PIN E30 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[41]}]
+# OUT46_P LA12_P G15
+set_property -dict {PACKAGE_PIN C29 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[45]}]
+# OUT46_N LA12_N G16
+set_property -dict {PACKAGE_PIN B29 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[45]}]
+# OUT49_P LA16_P G18
+set_property -dict {PACKAGE_PIN B27 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[48]}]
+# OUT49_N LA16_N G19
+set_property -dict {PACKAGE_PIN A27 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[48]}]
+# OUT15_P LA20_P G21
+set_property -dict {PACKAGE_PIN E19 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[14]}]
+# OUT15_N LA20_N G22
+set_property -dict {PACKAGE_PIN D19 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[14]}]
+# OUT31_P LA22_P G24
+set_property -dict {PACKAGE_PIN C20 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[30]}]
+# OUT31_N LA22_N G25
+set_property -dict {PACKAGE_PIN B20 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[30]}]
+# OUT5_P LA02_P H7
+set_property -dict {PACKAGE_PIN H24 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[4]}]
+# OUT5_N LA02_N H8
+set_property -dict {PACKAGE_PIN H25 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[4]}]
+# OUT20_P LA04_P H10
+set_property -dict {PACKAGE_PIN G28 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[19]}]
+# OUT20_N LA04_N H11
+set_property -dict {PACKAGE_PIN F28 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[19]}]
+# OUT2_P LA07_P H13
+set_property -dict {PACKAGE_PIN E28 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[1]}]
+# OUT2_N LA07_N H14
+set_property -dict {PACKAGE_PIN D28 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[1]}]
+# OUT41_P LA11_P H16
+set_property -dict {PACKAGE_PIN G27 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[40]}]
+# OUT41_N LA11_N H17
+set_property -dict {PACKAGE_PIN F27 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[40]}]
+# OUT32_P LA15_P H19
+set_property -dict {PACKAGE_PIN C24 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[31]}]
+# OUT32_N LA15_N H20
+set_property -dict {PACKAGE_PIN B24 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[31]}]
+# OUT44_P LA19_P H22
+set_property -dict {PACKAGE_PIN G18 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[43]}]
+# OUT44_N LA19_N H23
+set_property -dict {PACKAGE_PIN F18 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[43]}]
+# OUT37_P LA21_P H25
+set_property -dict {PACKAGE_PIN A20 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[36]}]
+# OUT37_N LA21_N H26
+set_property -dict {PACKAGE_PIN A21 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[36]}]
+# OUT19_P HA03_P J6
+set_property -dict {PACKAGE_PIN C12 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[18]}]
+# OUT19_N HA03_N J7
+set_property -dict {PACKAGE_PIN B12 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[18]}]
+# OUT4_P HA07_P J9
+set_property -dict {PACKAGE_PIN B14 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[3]}]
+# OUT4_N HA07_N J10
+set_property -dict {PACKAGE_PIN A15 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[3]}]
+# OUT35_P HA11_P J12
+set_property -dict {PACKAGE_PIN B13 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[34]}]
+# OUT35_N HA11_N J13
+set_property -dict {PACKAGE_PIN A13 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[34]}]
+# OUT10_P HA14_P J15
+set_property -dict {PACKAGE_PIN J16 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[9]}]
+# OUT10_N HA14_N J16
+set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[9]}]
+# OUT39_P HA18_P J18
+set_property -dict {PACKAGE_PIN K14 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[38]}]
+# OUT39_N HA18_N J19
+set_property -dict {PACKAGE_PIN J14 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[38]}]
+# OUT18_P HA02_P K7
+set_property -dict {PACKAGE_PIN D11 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[17]}]
+# OUT18_N HA02_N K8
+set_property -dict {PACKAGE_PIN C11 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[17]}]
+# OUT12_P HA06_P K10
+set_property -dict {PACKAGE_PIN D14 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[11]}]
+# OUT12_N HA06_N K11
+set_property -dict {PACKAGE_PIN C14 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[11]}]
+# OUT26_P HA10_P K13
+set_property -dict {PACKAGE_PIN A11 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[25]}]
+# OUT26_N HA10_N K14
+set_property -dict {PACKAGE_PIN A12 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[25]}]
+# OUT17_P HA17_P K16
+set_property -dict {PACKAGE_PIN G13 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[16]}]
+# OUT17_N HA17_N K17
+set_property -dict {PACKAGE_PIN F13 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[16]}]
+# OUT45_P HA21_P K19
+set_property -dict {PACKAGE_PIN J11 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[44]}]
+# OUT38_P HA22_P J21
+set_property -dict {PACKAGE_PIN L11 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[37]}]
+# OUT38_N HA22_N J22
+set_property -dict {PACKAGE_PIN K11 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[37]}]
+# OUT45_N HA21_N K20
+set_property -dict {PACKAGE_PIN J12 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[44]}]
+# OUT30_P HA23_P K22
+set_property -dict {PACKAGE_PIN L12 IOSTANDARD LVDS_25} [get_ports {CHANNELS_P[29]}]
+# OUT30_N HA23_N K23
+set_property -dict {PACKAGE_PIN L13 IOSTANDARD LVDS_25} [get_ports {CHANNELS_N[29]}]
+

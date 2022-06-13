@@ -1,119 +1,123 @@
--------------------------------------------------------------------------------------
--- Company  : Molecular Microscopy & Spectroscopy, Istituto Italiano di Tecnologia
+------------------------------------------------------------
+-- Company  : IIT
 -- Engineers: Alessandro Rossetta, Mattia Donato 
 -- Date     : April 2019
--- Design   : Time-Tagging Platform
--- License  : CC BY-NC 4.0 
--------------------------------------------------------------------------------------
+-- Design   : 
+-- License  : to be defined
+------------------------------------------------------------
 
 
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_arith.all;
-use ieee.math_real.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.std_logic_arith.ALL;
+USE ieee.math_real.ALL;
 
-library unisim;
-use unisim.vcomponents.all;
+LIBRARY unisim;
+USE unisim.vcomponents.ALL;
 
-entity tap_delay_line is
-	generic (
-		taps 	    : integer;
-		x_offset	: integer;
-		y_offset	: integer);
-	port (
-		x_fake          : in integer;
-		y_fake          : in integer;		
-		photon_filtered : in std_logic;		
-		reset			: in std_logic;
-		clock			: in std_logic;		
-		thermometer	: out std_logic_vector(taps-1 downto 0));		
-end tap_delay_line;
+ENTITY tap_delay_line IS
+	GENERIC (
+		STAGES 	: INTEGER;
+		Xoff	: INTEGER;
+		Yoff	: INTEGER);
+	PORT (
+		x_fake          : IN INTEGER;
+		y_fake          : IN INTEGER;
+		
+		trigger			: IN std_logic;		-- START signal input (triggers carrychain)
+		reset			: IN std_logic;
+		clock			: IN std_logic;		-- STOP signal input (assumed to be clock synchronous)
+		latched_output	: OUT std_logic_vector(STAGES-1 DOWNTO 0));		-- Carrychain output, to be converted to binary
+END tap_delay_line;
 
-architecture tap_delay_line_structure of tap_delay_line is
+ARCHITECTURE behaviour OF tap_delay_line IS
+	
+	-- To place the delayline in a particular spot (best for linearities and resolution), the LOC constraint is used.
+	ATTRIBUTE LOC			 	: string;
+	ATTRIBUTE BEL			 	: string;
+	ATTRIBUTE keep_hierarchy 	: string;
+	ATTRIBUTE keep_hierarchy OF behaviour	: ARCHITECTURE IS "true";
+	
+	ATTRIBUTE myAttribute: integer;
 
-signal metastable_thermometer		: std_logic_vector(taps-1 downto 0);
-signal stable_thermometer			: std_logic_vector(taps-1 downto 0);	
-signal s_input		                : std_logic_vector(3 downto 0);
+	SIGNAL unreg		: std_logic_vector(STAGES-1 DOWNTO 0);
+	SIGNAL reg			: std_logic_vector(STAGES-1 DOWNTO 0);
+	
+	SIGNAL s_input		: std_logic_vector(3 DOWNTO 0);
 
-attribute loc			 	: string;
-attribute bel			 	: string;
-attribute establish_hierarchy 	: string;
-attribute establish_hierarchy of tap_delay_line_structure: architecture is "true";
+BEGIN
 
-begin
-
-
-	tap_delay_line: for i in 0 to taps/4-1 generate
-	first_tap: if i = 0 generate
+	-- Generation of the carrychain, starting at the specified X, Y coordinate. 
+	carry_delay_line: FOR i IN 0 TO STAGES/4-1 GENERATE
+		first_carry4: IF i = 0 GENERATE
     
-    attribute loc of tap : label is "slice_x"&integer'image(x_offset)&"y"&integer'image(y_offset+i);
+       ATTRIBUTE LOC OF delayblock : LABEL IS "SLICE_X"&INTEGER'image(Xoff)&"Y"&INTEGER'image(Yoff+i);
 
         
-    begin
+    BEGIN
     
-    s_input <= "111" & photon_filtered;
+    s_input <= "111" & trigger;
     
-        tap: CARRY4 
-            port map(
-                CO         => metastable_thermometer(3 downto 0),
+        delayblock: CARRY4 
+            PORT MAP(
+                CO         => unreg(3 DOWNTO 0),
                 CI         => '0',
                 CYINIT     => '1',
                 DI         => "0000",
-                S          => s_input );
-     end generate;
+                S         => s_input );
+     END GENERATE;
 
 		 
-         next_tap: if i > 0 generate
+         next_carry4: IF i > 0 GENERATE
 		 
-			attribute loc of tap : label is "slice_x"&integer'image(x_offset)&"y"&integer'image(y_offset+i);
+			ATTRIBUTE LOC OF delayblock : LABEL IS "SLICE_X"&INTEGER'image(Xoff)&"Y"&INTEGER'image(Yoff+i);
 
                         
-		begin
+		BEGIN
 		
-            tap: CARRY4 
-				port map(
-					CO 		=> metastable_thermometer(4*(i+1)-1 downto 4*i),
-					CI 		=> metastable_thermometer(4*i-1),
+            delayblock: CARRY4 
+				PORT MAP(
+					CO 		=> unreg(4*(i+1)-1 DOWNTO 4*i),
+					CI 		=> unreg(4*i-1),
 					CYINIT 	=> '0',
 					DI 		=> "0000",
 					S 		=> "1111");
-         end generate;
-    end generate;
+         END GENERATE;
+    END GENERATE;
     
- 
-	flip_flop_barrier: for j in 0 to taps-1 generate
+    -- The output is latched two times for stability reasons. 
+	latch: FOR j IN 0 TO STAGES-1 GENERATE
 	
        
-        AFF_FF : if ((j+1)mod(4) = 1) generate		
+        AFF_FF : if ((j+1)MOD(4) = 1) GENERATE		
 
-		attribute bel of first_latch  : label is "AFF";
-		attribute loc of first_latch  : label is "slice_x"&integer'image(x_offset)&"y"&integer'image(y_offset+integer(floor(real(j/4))));
-	 	attribute bel of second_latch : label is "BFF";
-		attribute loc of second_latch : label is "slice_x"&integer'image(x_offset)&"y"&integer'image(y_offset+integer(floor(real(j/4))));
+		ATTRIBUTE BEL OF FDR_1 : LABEL IS "AFF";
+		ATTRIBUTE LOC OF FDR_1 : LABEL IS "SLICE_X"&INTEGER'image(Xoff)&"Y"&INTEGER'image(Yoff+integer(floor(real(j/4))));
+	 	ATTRIBUTE BEL OF FDR_2 : LABEL IS "BFF";
+		ATTRIBUTE LOC OF FDR_2 : LABEL IS "SLICE_X"&INTEGER'image(Xoff)&"Y"&INTEGER'image(Yoff+integer(floor(real(j/4))));
 
 		
-	begin
+	BEGIN
 	
-		first_latch: FDR
-			generic map(
+		FDR_1: FDR
+			GENERIC MAP(
 				INIT 	=> '0')
-			port map(
+			PORT MAP(
 				C 		=> clock,
 				R 		=> reset,
-				D 		=> metastable_thermometer(j),
-				Q 		=> stable_thermometer(j));
-				
-		second_latch: FDR	
-			generic map(
+				D 		=> unreg(j),
+				Q 		=> reg(j));
+		FDR_2: FDR	
+			GENERIC MAP(
 				INIT 	=> '0')
-			port map(
+			PORT MAP(
 				C 		=> clock,
 				R 		=> reset,
-				D 		=> stable_thermometer(j),
-				Q 		=> thermometer(j));
-	end generate;
+				D 		=> reg(j),
+				Q 		=> latched_output(j));
+	END GENERATE;
 
 	
-end generate;
+END GENERATE;
 
-end tap_delay_line_structure;
+END behaviour;

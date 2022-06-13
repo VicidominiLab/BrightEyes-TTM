@@ -1,11 +1,11 @@
-//////////////////////////////////////////////////////////////////////////////////
-// Company : Electronic Design Laboratory, Istituto Italiano di Tecnologia
-// Engineer: Francesco Diotalevi 
-// Date    : 2015
-// Design  : synchronize a pulse signal from slow clock domain to fast clock domain
-// License : CC BY-NC 4.0 
-//////////////////////////////////////////////////////////////////////////////////
-
+//-----------------------------------------------------
+// Design Name : Auxiliary Display
+// File Name   : synch_pulf2s.v
+// Function    : synchronize a pulse signal from slow clock domain to fast clock domain
+// Author      : Francesco Diotalevi
+// Company     : Istituto Italiano di Tecnologia
+// Year        : 2015
+//-----------------------------------------------------
 `timescale 1ns / 1ps
 
 module synch_pulf2s    (

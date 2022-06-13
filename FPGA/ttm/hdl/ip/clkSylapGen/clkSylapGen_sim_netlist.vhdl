@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Fri May  7 09:32:37 2021
+-- Date        : Tue Jun 29 12:35:59 2021
 -- Host        : IITMMSDL002 running 64-bit Linux Mint 20.1
--- Command     : write_vhdl -force -mode funcsim
---               /home/mdonato-fast/myDev/timetaggingplatform/FPGA/ttm/hdl/ip/clkSylapGen/clkSylapGen_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top clkSylapGen -prefix
+--               clkSylapGen_ clkSylapGen_sim_netlist.vhdl
 -- Design      : clkSylapGen
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,8 +23,6 @@ entity clkSylapGen_clkSylapGen_clk_wiz is
     clk_in1_p : in STD_LOGIC;
     clk_in1_n : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of clkSylapGen_clkSylapGen_clk_wiz : entity is "clkSylapGen_clk_wiz";
 end clkSylapGen_clkSylapGen_clk_wiz;
 
 architecture STRUCTURE of clkSylapGen_clkSylapGen_clk_wiz is

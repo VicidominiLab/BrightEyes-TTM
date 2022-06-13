@@ -2,51 +2,47 @@
 
 The Time-Tagging Module (TTM) is an aggregation of different parts with different licenses.
 
-**Unless otherwise stated, they are licensed under a CC-BY-NC 4.0**, 
-Creative Commons Attribution-NonCommercial 4.0 International License. 
+**Unless otherwise stated, they are licensed under a CC-BY-NC 4.0**,
+Creative Commons Attribution-NonCommercial 4.0 International License.
+.. image:: <https://licensebuttons.net/l/by-nc/4.0/88x31.png>
 
-[![License: CC BY-NC 4.0](https://licensebuttons.net/l/by-nc/4.0/88x31.png)](https://creativecommons.org/licenses/by-nc/4.0/)
-
-In addition to the terms of the license, **we ask to acknowledge the use of the time-tagging module in scientific articles by citing**:
-
-```
-The BrightEyes-TTM: an Open-Source Time-Tagging Module for Single-Photon Microscopy
-A. Rossetta, E. Slenders, M. Donato, E. Perego, F. Diotalevi, L. Lanzano', S. V. Koho, G. Tortarolo, M.Crepaldi, G. Vicidomini
-bioRxiv 2021.10.11.463950; doi: https://doi.org/10.1101/2021.10.11.463950
-```
+> ```{eval-rst}
+>
+> :target: https://creativecommons.org/licenses/by-nc/4.0/
+> :alt: License: CC BY-NC 4.0
+> ```
 
 **Please note the following exceptions.**
 
-- [FX3 interface module](FPGA/ttm/hdl/to_fxr_workaround.v):
-the Verilog module used to interface the FPGA to the Cypress FX3, is derived 
+[FX3 interface module](https://github.com/VicidominiLab/BrightEyes-TTM/blob/v1.0/FPGA/ttm/hdl/to_fxr_workaround.v):
+the Verilog module used to interface the FPGA to the Cypress FX3, is derived
 from the Cypress Application note AN65974 - Designing with the EZ-USB™ FX3
-slave FIFO interface https://www.cypress.com/documentation/application-notes/an65974-designing-ez-usb-fx3-slave-fifo-interface is under a Cypress License.
+slave FIFO interface <https://www.cypress.com/documentation/application-notes/an65974-designing-ez-usb-fx3-slave-fifo-interface> is under a Cypress License.
 
-- [SYLAP](FPGA/ttm/hdl/sylap/):
+[SYLAP](https://github.com/VicidominiLab/BrightEyes-TTM/blob/main/FPGA/ttm/hdl/sylap/):
 SYLAP (Simulate Your Laser and Photons) is not part of the TTM module as
-it can be disactivated in the top level of the FPGA code. SYLAP is has been
-aggregated to the TTM only for debugging purpose. The license of SYLAP it is 
-the License GPLv2.1 the original repository is https://github.com/VicidominiLab/SYLAP
+it can be disactivated in the top level of the FPGA code. The is has been
+aggregated to the TTM for debugging purpose. The license of SYLAP it is
+the License GPLv2.1 the original repository is <https://github.com/VicidominiLab/SYLAP>
 
-- [Data Receiver for Linux](dataReceiver/linux/):
+[Data Receiver for Linux](https://github.com/VicidominiLab/BrightEyes-TTM/blob/main/FPGAdataReceiver/linux/):
 is the License GPLv2 as derivates from cyusb_linux_1.0.5 which is part of
-the Cypress EZ-USB FX3 SDK 1.3.4 for Linux. It can be downloaded from 
-https://www.cypress.com/documentation/software-and-drivers/ez-usb-fx3-software-development-kit
-and it can be found also here https://github.com/Ho-Ro/cyusb_linux 
+the Cypress EZ-USB FX3 SDK 1.3.4 for Linux. It can be downloaded from
+<https://www.cypress.com/documentation/software-and-drivers/ez-usb-fx3-software-development-kit>
+and it can be found also here <https://github.com/Ho-Ro/cyusb_linux>
 
-- [Data Receiver for Windows](dataReceiver/windows/):
+[Data Receiver for Windows](https://github.com/VicidominiLab/BrightEyes-TTM/blob/main/dataReceiver/windows/):
 is the License GPLv2 as derivates from cyusb_linux_1.0.5 which is part of
-the Cypress EZ-USB FX3 SDK 1.3.4 for Linux and then adapted to Windows. 
+the Cypress EZ-USB FX3 SDK 1.3.4 for Linux and then adapted to Windows.
 This version uses also libUSB and POSIX Threads for Win32 libraries both
 under LGPLv2.1.
 
-- [SPAD-FFS libraries](dataProcessing/libs/spad_ffs/):
-the libraries for the analysis of confocal laser-scanning microscopy based fluorescence 
-fluctuation spectroscopy (FFS) data analysis is under a BSD-3-Clause. The original version 
-is https://github.com/VicidominiLab/spad-ffs
+[SPAD-FFS libraries](https://github.com/VicidominiLab/libspadffs/tree/ttm/):
+the libraries for the analysis of confocal laser-scanning microscopy based fluorescence
+fluctuation spectroscopy (FFS) data analysis is under a BSD-3-Clause. The original version
+is <https://github.com/VicidominiLab/spad-ffs>
 
-
-A copy of the text of the above mentioned licenses can be found in the folder [license/](license/).
+The a copy of the text of the above mentioned licenses can be found in the folder [license/](https://github.com/VicidominiLab/BrightEyes-TTM/blob/main/license/).
 
 # Copyright
 

@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../ttm.srcs/sources_1/ip/ila_1/sim/ila_1.vhd" \
+"../../../../../hdl/tap_delay_line.vhd" \
+"../../../../../hdl/tap_delay_line_with_encoder.vhd" \
+"../../../../../hdl/input_filter.vhd" \
+"../../../../../hdl/tdc_module.vhd" \
+"../../../../../hdl/top.vhd" \
+"../../../../../hdl/mytypes.vhd" \
+"../../../../../hdl/datapreparation_new.vhd" \
+"../../../../../hdl/datapreparation_new_with_zerosuppression.vhd" \
+
+# Do not sort compile order
+nosort

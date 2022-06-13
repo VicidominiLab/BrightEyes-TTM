@@ -1,0 +1,2 @@
+ila_fx3.vhd,vhdl,xil_defaultlib,../../../ip/ila_fx3/sim/ila_fx3.vhd,incdir="../../../ip/ila_fx3/hdl/verilog"
+glbl.v,Verilog,xil_defaultlib,glbl.v

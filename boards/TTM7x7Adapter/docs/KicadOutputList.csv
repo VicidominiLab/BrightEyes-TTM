@@ -1,0 +1,10 @@
+"Id";"Designator";"Package";"Quantity";"Designation";"Supplier and ref";
+1;"J12";"SAMTEC_SEAF-30-XX.X-X-08-X-A-LP";1;"SEAF-30-XX.X-X-08-X-A-LP";;;
+2;"J11";"SAMTEC_ASP-134488-01";1;"ASP-134488-01";;;
+3;"J10";"CUI_PJ-002BH-SMT-TR";1;"PJ-002BH-SMT-TR";;;
+4;"RN1";"R_Cat16-8";1;"R_Pack08";;;
+5;"FID3,FID2,FID1";"Fiducial_0.5mm_Mask1mm";3;"Fiducial";;;
+6;"J9,J8,J7,J6,J5,J4,J3,J2";"SMB_Jack_Vertical";8;"Conn_Coaxial";;;
+7;"SW1,SW3";"SW_DIP_SPSTx08_Slide_Copal_CHS-08A_W5.08mm_P1.27mm_JPin";2;"SW_DIP_x08";;;
+8;"J1";"PinHeader_1x14_P2.54mm_Vertical_SMD_Pin1Left";1;"Conn_01x14";;;
+9;"SW2";"PinHeader_1x03_P2.54mm_Horizontal";1;"SW_SPDT";;;

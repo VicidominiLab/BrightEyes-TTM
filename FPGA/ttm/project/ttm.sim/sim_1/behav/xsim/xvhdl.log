@@ -1,0 +1,14 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/project/ttm.srcs/sources_1/ip/ila_1/sim/ila_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity ila_1
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/tap_delay_line.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tap_delay_line
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/tap_delay_line_with_encoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity tap_delay_line_with_encoder
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/input_filter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity input_filter
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/tdc_module.vhd" into library xil_defaultlib
+ERROR: [VRFC 10-149] 'mytypes' is not compiled in library xil_defaultlib [/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/tdc_module.vhd:8]
+INFO: [VRFC 10-307] analyzing entity tdc_module
+ERROR: [VRFC 10-91] std_array_7downto0_vector is not declared [/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/tdc_module.vhd:38]
+ERROR: [VRFC 10-1504] unit tdc_module ignored due to previous errors [/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/tdc_module.vhd:10]
+INFO: [VRFC 10-240] VHDL file /home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/tdc_module.vhd ignored due to errors

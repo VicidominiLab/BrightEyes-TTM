@@ -1,10 +1,10 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
--- Date        : Fri May  7 09:32:36 2021
+-- Date        : Tue Jun 29 12:35:59 2021
 -- Host        : IITMMSDL002 running 64-bit Linux Mint 20.1
--- Command     : write_vhdl -force -mode funcsim
---               /home/mdonato-fast/myDev/timetaggingplatform/FPGA/ttm/hdl/ip/clockUsbGen/clockUsbGen_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top clockUsbGen -prefix
+--               clockUsbGen_ clockUsbGen_sim_netlist.vhdl
 -- Design      : clockUsbGen
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -21,8 +21,6 @@ entity clockUsbGen_clockUsbGen_clk_wiz is
     locked : out STD_LOGIC;
     clk_in400 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of clockUsbGen_clockUsbGen_clk_wiz : entity is "clockUsbGen_clk_wiz";
 end clockUsbGen_clockUsbGen_clk_wiz;
 
 architecture STRUCTURE of clockUsbGen_clockUsbGen_clk_wiz is

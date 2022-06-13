@@ -1,0 +1,3 @@
+clockMainGen_clk_wiz.v,verilog,xil_defaultlib,../../../../../hdl/ip/clockMainGen/clockMainGen_clk_wiz.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+clockMainGen.v,verilog,xil_defaultlib,../../../../../hdl/ip/clockMainGen/clockMainGen.v,incdir="$ref_dir/../../../ipstatic"incdir="../../../ipstatic"
+glbl.v,Verilog,xil_defaultlib,glbl.v

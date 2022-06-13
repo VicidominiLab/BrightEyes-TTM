@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Fri May  7 09:32:36 2021
+// Date        : Tue Jun 29 12:35:59 2021
 // Host        : IITMMSDL002 running 64-bit Linux Mint 20.1
-// Command     : write_verilog -force -mode funcsim
-//               /home/mdonato-fast/myDev/timetaggingplatform/FPGA/ttm/hdl/ip/clkSylapGen/clkSylapGen_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top clkSylapGen -prefix
+//               clkSylapGen_ clkSylapGen_sim_netlist.v
 // Design      : clkSylapGen
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -43,7 +43,6 @@ module clkSylapGen
         .reset(reset));
 endmodule
 
-(* ORIG_REF_NAME = "clkSylapGen_clk_wiz" *) 
 module clkSylapGen_clkSylapGen_clk_wiz
    (clk_sylap400,
     clk_sylap50,

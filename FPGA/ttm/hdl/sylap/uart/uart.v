@@ -1,10 +1,5 @@
-//////////////////////////////////////////////////////////////////////////////////
-// Company:  Istituto Italiano di Tecnologia (Genova, Italy)
-// Engineer: Mattia Donato
-// Create Date: July 2020
-// License : GPLv2
-// Derived from the https://github.com/jamieiles/uart.git
-//////////////////////////////////////////////////////////////////////////////////
+// Author: https://github.com/jamieiles/uart.git
+// License: GPLv2 
 
 module uart(input wire [7:0] din,
 	    input wire wr_en,

@@ -1,9 +1,8 @@
 //////////////////////////////////////////////////////////////////////////////////
-// Company : Electronic Design Laboratory, Istituto Italiano di Tecnologia
+// Company : IIT
 // Engineer: Francesco Diotalevi 
 // Date    : February 2019
-// Design  : FIFO for RTL interface for writing on Cypress FX3
-// License : CC BY-NC 4.0 
+// Design  : 
 //////////////////////////////////////////////////////////////////////////////////
 
 module one_fifo #(

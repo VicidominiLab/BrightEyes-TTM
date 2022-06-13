@@ -126,6 +126,18 @@ wire clk_in2_clockMainGen;
   wire        clkfbstopped_unused;
   wire        clkinstopped_unused;
   wire        reset_high;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg1 = 0;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg2 = 0;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg3 = 0;
+  (* KEEP = "TRUE" *) 
+  (* ASYNC_REG = "TRUE" *)
+  reg  [7 :0] seq_reg4 = 0;
 
   MMCME2_ADV
   #(.BANDWIDTH            ("HIGH"),
@@ -211,22 +223,86 @@ wire clk_in2_clockMainGen;
 
 
 
-  BUFG clkout1_buf
+
+  BUFGCE clkout1_buf
    (.O   (clk_240),
+    .CE  (seq_reg1[7]),
     .I   (clk_240_clockMainGen));
 
+  BUFH clkout1_buf_en
+   (.O   (clk_240_clockMainGen_en_clk),
+    .I   (clk_240_clockMainGen));
+  always @(posedge clk_240_clockMainGen_en_clk or posedge reset_high) begin
+    if(reset_high == 1'b1) begin
+	    seq_reg1 <= 8'h00;
+    end
+    else begin
+        seq_reg1 <= {seq_reg1[6:0],locked_int};
+  
+    end
+  end
 
-  BUFG clkout2_buf
+
+  BUFGCE clkout2_buf
    (.O   (clk_400),
+    .CE  (seq_reg2[7]),
     .I   (clk_400_clockMainGen));
+ 
+  BUFH clkout2_buf_en
+   (.O   (clk_400_clockMainGen_en_clk),
+    .I   (clk_400_clockMainGen));
+ 
+  always @(posedge clk_400_clockMainGen_en_clk or posedge reset_high) begin
+    if(reset_high == 1'b1) begin
+	  seq_reg2 <= 8'h00;
+    end
+    else begin
+        seq_reg2 <= {seq_reg2[6:0],locked_int};
+  
+    end
+  end
 
-  BUFG clkout3_buf
+
+  BUFGCE clkout3_buf
    (.O   (clk_50),
+    .CE  (seq_reg3[7]),
     .I   (clk_50_clockMainGen));
+ 
+  BUFH clkout3_buf_en
+   (.O   (clk_50_clockMainGen_en_clk),
+    .I   (clk_50_clockMainGen));
+ 
+  always @(posedge clk_50_clockMainGen_en_clk or posedge reset_high) begin
+    if(reset_high == 1'b1) begin
+	  seq_reg3 <= 8'h00;
+    end
+    else begin
+        seq_reg3 <= {seq_reg3[6:0],locked_int};
+  
+    end
+  end
 
-  BUFG clkout4_buf
+
+  BUFGCE clkout4_buf
    (.O   (clk_100),
+    .CE  (seq_reg4[7]),
     .I   (clk_100_clockMainGen));
+
+  BUFH clkout4_buf_en
+   (.O   (clk_100_clockMainGen_en_clk),
+    .I   (clk_100_clockMainGen));
+	
+  always @(posedge clk_100_clockMainGen_en_clk or posedge reset_high) begin
+    if(reset_high == 1'b1) begin
+	  seq_reg4 <= 8'h00;
+    end
+    else begin
+        seq_reg4 <= {seq_reg4[6:0],locked_int};
+  
+    end
+  end
+
+
 
 
 

@@ -1,0 +1,20 @@
+0.6
+2017.4
+Dec 15 2017
+20:57:24
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/fifo_iit.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/fine_delay.v,,fifo_iit,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/ip/clkSylapGen/clkSylapGen_sim_netlist.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/ip/fifo_decoupler/sim/fifo_decoupler.v,,clkSylapGen;clkSylapGen_clkSylapGen_clk_wiz,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/ip/clockMainGen/clockMainGen_sim_netlist.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/ip/clkSylapGen/clkSylapGen_sim_netlist.v,,clockMainGen;clockMainGen_clockMainGen_clk_wiz;glbl,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/ip/fifo_decoupler/sim/fifo_decoupler.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/uart/baud_rate_gen.v,,fifo_decoupler,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/one_fifo.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/uart/receiver.v,,one_fifo,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/fine_delay.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/one_fifo.v,,fine_delay,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/sylapGen.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/sylapTop.v,,sylapGen,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/sylapTop.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/synch_pulf2s.v,,sylapTop,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/uart/baud_rate_gen.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/fifo_iit.v,,baud_rate_gen,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/uart/receiver.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/sylapGen.v,,receiver,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/uart_commands.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/to_fxr_workaround.v,,uart_commands,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/synch_pulf2s.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/sylap/uart_commands.v,,synch_pulf2s,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/therm2bin_easy.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/project/ttm.srcs/sources_1/ip/fifo_dataprep/sim/fifo_dataprep.v,,therm2bin_easy,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/to_fxr_workaround.v,1627544878,verilog,,/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/hdl/therm2bin_easy.v,,to_fx3_workaround,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/project/ttm.sim/sim_1/behav/xsim/glbl.v,1513215259,verilog,,,,,,,,,,,,
+/home/mdonato-fast/myDev/timetaggingplatform-small7x7-newfifo/FPGA/ttm/project/ttm.srcs/sources_1/ip/fifo_dataprep/sim/fifo_dataprep.v,1626436100,verilog,,,,fifo_dataprep,,,,,,,,

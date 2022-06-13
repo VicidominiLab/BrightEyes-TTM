@@ -1,14 +1,14 @@
+`timescale 1ns / 10ps
+
 //////////////////////////////////////////////////////////////////////////////////
-// Company : Electronic Design Laboratory, Istituto Italiano di Tecnologia
+// Company : IIT
 // Engineer: Francesco Diotalevi 
 // Date    : February 2019
 // Design  : RTL interface for writing on Cypress FX3
-// License : CC BY-NC 4.0 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1ns / 10ps
 
 module to_fx3_workaround #(
-        parameter DEBUG = 1)
+        parameter DEBUG = 0)
 (   
     // System signals
 	input        rstn,            //system reset active low
@@ -16,7 +16,7 @@ module to_fx3_workaround #(
     // Stream Interface
     input         stream_rstn,
     input         stream_clk,
-	input [255:0] stream_data_i,
+	input [31:0] stream_data_i,
     input         stream_write_i,
     output        stream_full_o,
     output        stream_prog_full_o,
@@ -79,7 +79,7 @@ reg        i_pktend;
 reg        i_error_in;
 reg        i_error;
 wire       i_error_in_synched;
-reg [255:0] prev_data_in;
+reg [31:0] prev_data_in;
 reg [31:0] prev_data;
 wire       i_stream_full;
 reg [19:0] timer_count;
@@ -366,7 +366,7 @@ if (DEBUG==1) begin
         end
     end
 
-    ila_0 ila_0 (
+    ila_fx3 ila_fx3 (
         .clk(clk), // input wire clk
         .probe0(fdata), // input wire [31:0]  probe0  
         .probe1(faddr), // input wire [1:0]  probe1 
@@ -393,16 +393,7 @@ if (DEBUG==1) begin
         .probe22(i_data_valid_second), // input wire [0:0]  probe22
         .probe23(fifo_iit.data_top), // input wire [31:0]  probe23
         .probe24(fifo_iit.i_ne_fifo_empty), // input wire [0:0]  probe24
-        .probe25(fifo_iit.i_ne_empty_middle),// input wire [0:0]  probe25
-        .probe26(rstn),
-        .probe27(clk),
-        .probe28(stream_rstn),      
-        .probe29(stream_clk),    
-        .probe30(stream_data_i),       
-        .probe31(stream_write_i),
-        .probe32(stream_full_o),
-        .probe33(stream_prog_full_o),  
-        .probe34(counter_for_keep_reset_in_n)
+        .probe25(fifo_iit.i_ne_empty_middle)// input wire [0:0]  probe25
     );                    
 end                  
 endmodule

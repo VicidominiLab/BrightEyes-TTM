@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Fri May  7 09:32:36 2021
+// Date        : Tue Jun 29 12:35:59 2021
 // Host        : IITMMSDL002 running 64-bit Linux Mint 20.1
-// Command     : write_verilog -force -mode synth_stub
-//               /home/mdonato-fast/myDev/timetaggingplatform/FPGA/ttm/hdl/ip/clockUsbGen/clockUsbGen_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top clockUsbGen -prefix
+//               clockUsbGen_ clockUsbGen_stub.v
 // Design      : clockUsbGen
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7k325tffg900-2

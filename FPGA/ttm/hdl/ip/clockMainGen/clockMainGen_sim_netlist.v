@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (lin64) Build 2086221 Fri Dec 15 20:54:30 MST 2017
-// Date        : Mon Sep 13 16:33:22 2021
-// Host        : IITMMSDL002 running 64-bit Linux Mint 20.2
-// Command     : write_verilog -force -mode funcsim
-//               /home/mdonato-fast/myDev/timetaggingplatform-v1-Modified/FPGA/ttm/hdl/ip/clockMainGen/clockMainGen_sim_netlist.v
+// Date        : Tue Jul 13 12:27:37 2021
+// Host        : IITMMSDL002 running 64-bit Linux Mint 20.1
+// Command     : write_verilog -force -mode funcsim -rename_top clockMainGen -prefix
+//               clockMainGen_ clockMainGen_sim_netlist.v
 // Design      : clockMainGen
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -51,7 +51,6 @@ module clockMainGen
         .reset(reset));
 endmodule
 
-(* ORIG_REF_NAME = "clockMainGen_clk_wiz" *) 
 module clockMainGen_clockMainGen_clk_wiz
    (clk_240,
     clk_400,
@@ -72,12 +71,16 @@ module clockMainGen_clockMainGen_clk_wiz
 
   wire clk_100;
   wire clk_100_clockMainGen;
+  wire clk_100_clockMainGen_en_clk;
   wire clk_240;
   wire clk_240_clockMainGen;
+  wire clk_240_clockMainGen_en_clk;
   wire clk_400;
   wire clk_400_clockMainGen;
+  wire clk_400_clockMainGen_en_clk;
   wire clk_50;
   wire clk_50_clockMainGen;
+  wire clk_50_clockMainGen_en_clk;
   wire clk_in1_clockMainGen;
   wire clk_in1_n;
   wire clk_in1_p;
@@ -85,6 +88,10 @@ module clockMainGen_clockMainGen_clk_wiz
   wire clkfbout_clockMainGen;
   wire locked;
   wire reset;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg1;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg2;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg3;
+  (* RTL_KEEP = "true" *) (* async_reg = "true" *) wire [7:0]seq_reg4;
   wire NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED;
@@ -114,21 +121,89 @@ module clockMainGen_clockMainGen_clk_wiz
         .IB(clk_in1_n),
         .O(clk_in1_clockMainGen));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout1_buf
+  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
+  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0" *) 
+  BUFGCTRL #(
+    .INIT_OUT(0),
+    .PRESELECT_I0("TRUE"),
+    .PRESELECT_I1("FALSE")) 
+    clkout1_buf
+       (.CE0(seq_reg1[7]),
+        .CE1(1'b0),
+        .I0(clk_240_clockMainGen),
+        .I1(1'b1),
+        .IGNORE0(1'b0),
+        .IGNORE1(1'b1),
+        .O(clk_240),
+        .S0(1'b1),
+        .S1(1'b0));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFH clkout1_buf_en
        (.I(clk_240_clockMainGen),
-        .O(clk_240));
+        .O(clk_240_clockMainGen_en_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout2_buf
+  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
+  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0" *) 
+  BUFGCTRL #(
+    .INIT_OUT(0),
+    .PRESELECT_I0("TRUE"),
+    .PRESELECT_I1("FALSE")) 
+    clkout2_buf
+       (.CE0(seq_reg2[7]),
+        .CE1(1'b0),
+        .I0(clk_400_clockMainGen),
+        .I1(1'b1),
+        .IGNORE0(1'b0),
+        .IGNORE1(1'b1),
+        .O(clk_400),
+        .S0(1'b1),
+        .S1(1'b0));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFH clkout2_buf_en
        (.I(clk_400_clockMainGen),
-        .O(clk_400));
+        .O(clk_400_clockMainGen_en_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout3_buf
+  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
+  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0" *) 
+  BUFGCTRL #(
+    .INIT_OUT(0),
+    .PRESELECT_I0("TRUE"),
+    .PRESELECT_I1("FALSE")) 
+    clkout3_buf
+       (.CE0(seq_reg3[7]),
+        .CE1(1'b0),
+        .I0(clk_50_clockMainGen),
+        .I1(1'b1),
+        .IGNORE0(1'b0),
+        .IGNORE1(1'b1),
+        .O(clk_50),
+        .S0(1'b1),
+        .S1(1'b0));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFH clkout3_buf_en
        (.I(clk_50_clockMainGen),
-        .O(clk_50));
+        .O(clk_50_clockMainGen_en_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout4_buf
+  (* XILINX_LEGACY_PRIM = "BUFGCE" *) 
+  (* XILINX_TRANSFORM_PINMAP = "CE:CE0 I:I0" *) 
+  BUFGCTRL #(
+    .INIT_OUT(0),
+    .PRESELECT_I0("TRUE"),
+    .PRESELECT_I1("FALSE")) 
+    clkout4_buf
+       (.CE0(seq_reg4[7]),
+        .CE1(1'b0),
+        .I0(clk_100_clockMainGen),
+        .I1(1'b1),
+        .IGNORE0(1'b0),
+        .IGNORE1(1'b1),
+        .O(clk_100),
+        .S0(1'b1),
+        .S1(1'b0));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFH clkout4_buf_en
        (.I(clk_100_clockMainGen),
-        .O(clk_100));
+        .O(clk_100_clockMainGen_en_clk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("HIGH"),
@@ -213,6 +288,294 @@ module clockMainGen_clockMainGen_clk_wiz
         .PSINCDEC(1'b0),
         .PWRDWN(1'b0),
         .RST(reset));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[0] 
+       (.C(clk_240_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(locked),
+        .Q(seq_reg1[0]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[1] 
+       (.C(clk_240_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg1[0]),
+        .Q(seq_reg1[1]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[2] 
+       (.C(clk_240_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg1[1]),
+        .Q(seq_reg1[2]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[3] 
+       (.C(clk_240_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg1[2]),
+        .Q(seq_reg1[3]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[4] 
+       (.C(clk_240_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg1[3]),
+        .Q(seq_reg1[4]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[5] 
+       (.C(clk_240_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg1[4]),
+        .Q(seq_reg1[5]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[6] 
+       (.C(clk_240_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg1[5]),
+        .Q(seq_reg1[6]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg1_reg[7] 
+       (.C(clk_240_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg1[6]),
+        .Q(seq_reg1[7]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[0] 
+       (.C(clk_400_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(locked),
+        .Q(seq_reg2[0]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[1] 
+       (.C(clk_400_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg2[0]),
+        .Q(seq_reg2[1]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[2] 
+       (.C(clk_400_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg2[1]),
+        .Q(seq_reg2[2]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[3] 
+       (.C(clk_400_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg2[2]),
+        .Q(seq_reg2[3]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[4] 
+       (.C(clk_400_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg2[3]),
+        .Q(seq_reg2[4]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[5] 
+       (.C(clk_400_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg2[4]),
+        .Q(seq_reg2[5]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[6] 
+       (.C(clk_400_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg2[5]),
+        .Q(seq_reg2[6]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg2_reg[7] 
+       (.C(clk_400_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg2[6]),
+        .Q(seq_reg2[7]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[0] 
+       (.C(clk_50_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(locked),
+        .Q(seq_reg3[0]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[1] 
+       (.C(clk_50_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg3[0]),
+        .Q(seq_reg3[1]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[2] 
+       (.C(clk_50_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg3[1]),
+        .Q(seq_reg3[2]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[3] 
+       (.C(clk_50_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg3[2]),
+        .Q(seq_reg3[3]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[4] 
+       (.C(clk_50_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg3[3]),
+        .Q(seq_reg3[4]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[5] 
+       (.C(clk_50_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg3[4]),
+        .Q(seq_reg3[5]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[6] 
+       (.C(clk_50_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg3[5]),
+        .Q(seq_reg3[6]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg3_reg[7] 
+       (.C(clk_50_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg3[6]),
+        .Q(seq_reg3[7]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[0] 
+       (.C(clk_100_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(locked),
+        .Q(seq_reg4[0]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[1] 
+       (.C(clk_100_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg4[0]),
+        .Q(seq_reg4[1]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[2] 
+       (.C(clk_100_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg4[1]),
+        .Q(seq_reg4[2]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[3] 
+       (.C(clk_100_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg4[2]),
+        .Q(seq_reg4[3]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[4] 
+       (.C(clk_100_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg4[3]),
+        .Q(seq_reg4[4]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[5] 
+       (.C(clk_100_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg4[4]),
+        .Q(seq_reg4[5]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[6] 
+       (.C(clk_100_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg4[5]),
+        .Q(seq_reg4[6]));
+  (* ASYNC_REG *) 
+  FDCE #(
+    .INIT(1'b0)) 
+    \seq_reg4_reg[7] 
+       (.C(clk_100_clockMainGen_en_clk),
+        .CE(1'b1),
+        .CLR(reset),
+        .D(seq_reg4[6]),
+        .Q(seq_reg4[7]));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -1,10 +1,15 @@
+`timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company:  Istituto Italiano di Tecnologia (Genova, Italy)
 // Engineer: Mattia Donato
-// Create Date: July 2020
-// License : GPLv2
+// 
+// Create Date: 07/30/2020 02:50:39 PM
+// Design Name: 
+// Module Name: uart_commands
+// License : to be defined
+// 
 //////////////////////////////////////////////////////////////////////////////////
-`timescale 1ns / 1ps
+
 
 module sylapGen(
     input clk,

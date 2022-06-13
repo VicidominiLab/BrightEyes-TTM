@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../ip/ila_fx3/sim/ila_fx3.vhd" \
+
+nosort

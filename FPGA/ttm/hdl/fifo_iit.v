@@ -1,9 +1,8 @@
 //////////////////////////////////////////////////////////////////////////////////
-// Company : Electronic Design Laboratory, Istituto Italiano di Tecnologia
+// Company : IIT
 // Engineer: Francesco Diotalevi 
 // Date    : February 2019
-// Design  : FIFO for RTL interface for writing on Cypress FX3
-// License : CC BY-NC 4.0 
+// Design  : 
 //////////////////////////////////////////////////////////////////////////////////
 
 module fifo_iit 
@@ -12,7 +11,7 @@ module fifo_iit
     // From data producer
     input         stream_rstn,
     input         stream_clk,
-	input [255:0] stream_data_i,
+	input [31:0] stream_data_i,
     input         stream_write_i,
     output        stream_full_o,
     output        stream_prog_full_o,

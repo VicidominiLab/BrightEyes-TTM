@@ -1,0 +1,4 @@
+vhdl xil_defaultlib  \
+"../../../ip/ila_dataprep/sim/ila_dataprep.vhd" \
+
+nosort
