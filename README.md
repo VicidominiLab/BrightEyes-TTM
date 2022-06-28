@@ -1,1 +1,3 @@
-See https://brighteyes-ttm.readthedocs.io/
+The complete documentation is available on
+https://brighteyes-ttm.readthedocs.io/
+
