@@ -1,0 +1,38 @@
+﻿  dataReceiverW.cpp
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\packages\libusb.1.0.21\src\include\libusb-1.0\libusb.h(738,2): warning C4200: nonstandard extension used: zero-sized array in struct/union
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\packages\libusb.1.0.21\src\include\libusb-1.0\libusb.h(738,2): message : This member will be ignored by a defaulted constructor or copy/move assignment operator
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\packages\libusb.1.0.21\src\include\libusb-1.0\libusb.h(769,2): warning C4200: nonstandard extension used: zero-sized array in struct/union
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\packages\libusb.1.0.21\src\include\libusb-1.0\libusb.h(769,2): message : This member will be ignored by a defaulted constructor or copy/move assignment operator
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\packages\libusb.1.0.21\src\include\libusb-1.0\libusb.h(1265,2): warning C4200: nonstandard extension used: zero-sized array in struct/union
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\packages\libusb.1.0.21\src\include\libusb-1.0\libusb.h(1265,2): message : This member will be ignored by a defaulted constructor or copy/move assignment operator
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(46,22): warning C4244: '=': conversion from '_Rep' to 'long', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(47,64): warning C4244: '=': conversion from '_Rep' to 'long', possible loss of data
+          with
+          [
+              _Rep=__int64
+          ]
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(240,21): warning C4477: 'fprintf' : format string '%08ld' requires an argument of type 'long', but variadic argument 1 has type 'size_t'
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(240,21): message : consider using '%zd' in the format string
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(298,53): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(347,21): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'size_t'
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(347,21): message : consider using '%zd' in the format string
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(365,20): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'size_t'
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(365,20): message : consider using '%zd' in the format string
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(365,20): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 2 has type 'size_t'
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(365,20): message : consider using '%zd' in the format string
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(383,21): warning C4477: 'fprintf' : format string '%ld' requires an argument of type 'long', but variadic argument 2 has type 'size_t'
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(383,21): message : consider using '%zd' in the format string
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(399,26): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(216,6): warning C4101: 'last_footer_position': unreferenced local variable
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(215,6): warning C4101: 'first_header_position': unreferenced local variable
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(428,7): warning C4101: 'buffer': unreferenced local variable
+C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\dataReceiverW.cpp(803,30): warning C4244: '=': conversion from 'ssize_t' to 'int', possible loss of data
+  dataReceiverW.obj : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+  Generating code
+  Finished generating code
+  dataReceiverW.vcxproj -> C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\x64\Debug\dataReceiverW.exe

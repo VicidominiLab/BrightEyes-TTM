@@ -1,4 +1,0 @@
-C:\Users\madonato\source\repos\dataReceiverW\x64\Debug\dataReceiverW.exe
-C:\Users\madonato\source\repos\dataReceiverW\x64\Debug\dataReceiverW.pdb
-C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\x64\Debug\dataReceiverW.exe
-C:\Users\madonato\myDev\timetaggingplatform\dataReceiver\windows\dataReceiverW\x64\Debug\dataReceiverW.pdb
