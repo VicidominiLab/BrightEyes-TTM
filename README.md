@@ -1,7 +1,7 @@
 
 
 
-# Welcome to BrightEyes-TTM's documentation!
+# Welcome to BrightEyes-TTM!
 
 The **BrightEyes-TTM is an open-source project** which consists in a **data-acquisition card** able to implement the so-called photon time-tagging acquisition mode with a **time resolution of ~30ps** designed for microscopy and based on a **commercial FPGA Xilinx Kintex-7**.
 
