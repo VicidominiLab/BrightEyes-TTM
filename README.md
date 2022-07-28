@@ -9,7 +9,7 @@ The BrightEyes-TTM project born as an offshoot of the BrighEyes project founded 
 
 ---
 
-**THE COMPLETE DOCUMENTATION IS AVAILABLE ON https://brighteyes-ttm.readthedocs.io/**
+**THE COMPLETE DOCUMENTATION IS AVAILABLE AT https://brighteyes-ttm.readthedocs.io/**
 
 ---
 
