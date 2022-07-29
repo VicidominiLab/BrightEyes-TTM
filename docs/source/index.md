@@ -29,3 +29,12 @@ The BrightEyes-TTM project born as an offshoot of the BrighEyes project founded 
 There are two version of BrightEyes-TTM. The article on arXiv is referred to the version v1.0, the article published is refered to the version v2.0.
 ```
 
+
+:::{figure} img/TTM-BrightEyes-Minimal.png
+:align: center
+:alt: Assembly
+:width: 50%
+
+Fig. 1 - The BrightEyes Time-Tagging Module
+:::
+
