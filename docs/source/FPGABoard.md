@@ -13,7 +13,7 @@ Xilinx® FPGA Kintex-7 KC705 Evaluation Board
 
 
 The BrightEyes-TTM project has been designed, synthesed and implementated with the software Xilinx Vivado 2017.4 more info [Xilinx Vivado Design Suite](https://www.xilinx.com/products/design-tools/vivado.html). After having downloaded and installed [Vivado Design Suite](https://www.xilinx.com/products/design-tools/vivado.html) (Xilinx FPGA Programming software environment) the Xilinx FPGA evaluation card can be directly programmed with a precompiled firmware available here below. 
-The source code VHDL/Verilog is available on the GitHub repository [BrightEyes-TTM FPGA VHDL/Verilog code](https://github.com/VicidominiLab/BrightEyes-TTM/v2.0/main/FPGA/ttm/hdl)
+The source code VHDL/Verilog is available on the GitHub repository [BrightEyes-TTM FPGA VHDL/Verilog code](https://github.com/VicidominiLab/BrightEyes-TTM/tree/v2.0/FPGA/ttm/hdl)
 
 
 :::{figure} img/KC705_FPGA.png
