@@ -5,7 +5,7 @@ The BrightEyes-TTM project [\[1\]](https://doi.org/10.1101/2021.10.11.463950) bo
 :::{figure} img/TTM-BrightEyes-Minimal.png
 :align: center
 :alt: Assembly
-:width: 50%
+:width: 75%
 
 Fig. 1 - The BrightEyes Time-Tagging Module
 :::
