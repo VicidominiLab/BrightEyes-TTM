@@ -33,7 +33,7 @@ There are two version of BrightEyes-TTM. The article on arXiv is referred to the
 :::{figure} img/TTM-BrightEyes-Minimal.png
 :align: center
 :alt: Assembly
-:width: 50%
+:width: 75%
 
 Fig. 1 - The BrightEyes Time-Tagging Module
 :::
