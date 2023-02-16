@@ -71,16 +71,12 @@ The Time-Tagging Module (TTM) is an aggregation of different parts with differen
 In addition to the terms of the license, **we ask to acknowledge the use
 of the time-tagging module in scientific articles by citing**:
 
----------------------------------------
-
-*Rossetta, A., Slenders, E., Donato, M. et al.*
-
-The BrightEyes-TTM as an open-source time-tagging module for democratising single-photon microscopy. *Nat Commun **13**, 7406 (2022)*. 
-
+```
+Rossetta, A., Slenders, E., Donato, M. et al.
+The BrightEyes-TTM as an open-source time-tagging module for democratising single-photon microscopy. 
+Nat Commun 13, 7406 (2022). 
 https://doi.org/10.1038/s41467-022-35064-0
-
----------------------------------------
-
+```
 
 # Contact us
 
