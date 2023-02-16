@@ -25,6 +25,16 @@ The legacy version (v1.0) is available in the branch on GitHub
 
 The BrightEyes-TTM mainly consists in a data-acquisition (DAQ) card able to implement the so-called photon time-tagging acquisition mode (Fig. 2).
 
+
+```{note}
+**Reference:**
+Rossetta, A., Slenders, E., Donato, M. et al. 
+The BrightEyes-TTM as an open-source time-tagging module for democratising single-photon microscopy. Nat Commun 13, 7406 (2022). <https://doi.org/10.1038/s41467-022-35064-0>
+```
+
+
+
+
 ## Time-tagging
 
 :::{figure} img/TT_Principle.jpg
