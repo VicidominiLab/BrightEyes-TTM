@@ -26,8 +26,13 @@ The **BrightEyes-TTM is an open-source project** which consists in a **data-acqu
 The BrightEyes-TTM project born as an offshoot of the BrighEyes project founded by the ERC in 2018 (Consolidator Grant, N. 818699). The principal aim of the BrightEyes-TTM project is to give to any microscopy laboratory the possibility to implement and further develop single-photon microscopy. The second aim is to trigger the interest of the microscopy community, and establish the BrigthEyes-TTM as a new standard for single-photon laser scanning microscopy (LSM) experiments.
 
 ```{note}
-There are two version of BrightEyes-TTM. The article on arXiv is referred to the version v1.0, the article published is refered to the version v2.0.
+**Article on Nature Communications:**
+Rossetta, A., Slenders, E., Donato, M. et al. 
+The BrightEyes-TTM as an open-source time-tagging module for democratising single-photon microscopy. Nat Commun 13, 7406 (2022). <https://doi.org/10.1038/s41467-022-35064-0>
+
+There are two version of BrightEyes-TTM. The article on arXiv is referred to the version v1.0, the article published on Nature Communications is refered to the version v2.0.
 ```
+
 
 
 :::{figure} img/TTM-BrightEyes-Minimal.png
