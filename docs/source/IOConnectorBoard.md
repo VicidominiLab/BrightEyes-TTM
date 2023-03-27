@@ -17,8 +17,8 @@ pinout7x7
      - Frame
    * - J12
      - Laser SYNC
-   * - J13
-     - Pixel
    * - J14
      - Line
+   * - J13
+     - Pixel     
 ```
