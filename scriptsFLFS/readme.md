@@ -5,3 +5,4 @@ Part of the **BrightEyes-TTM, an open-source project**.
 Intensity based data can be analyzed with the script "svFCS_IntesityBased", while time-tagged data with the Jupyter notebook "svFCS_TimeTaggingBased". 
 With this scripts, it is possible to analyze single-photon data acquired with a SPAD array detector and perform spot-variation-FCS, FLCS and dual-color lifetime FCCS.
 
+An example of the data can be found at: https://doi.org/10.5281/zenodo.10046694 
