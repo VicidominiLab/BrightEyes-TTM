@@ -35,14 +35,14 @@ Fig. 1 - The BrightEyes Time-Tagging Module
 
 
 ```{note}
-**Article on Nature Communications:**
-Rossetta, A., Slenders, E., Donato, M. et al. 
-The BrightEyes-TTM as an open-source time-tagging module for democratising single-photon microscopy. Nat Commun 13, 7406 (2022). <https://doi.org/10.1038/s41467-022-35064-0>
+*The BrightEyes-TTM as an open-source time-tagging module for democratising single-photon microscopy.* _Rossetta, A., Slenders, E., Donato, M. et al._  **Nature Communications** 13, 7406 (2022). <https://doi.org/10.1038/s41467-022-35064-0>
 
 There are two version of BrightEyes-TTM. The article on arXiv is referred to the version v1.0, the article published on Nature Communications is refered to the version v2.0.
 ```
 
 ```{note}
-It uses BrightEyes-MCS technology. Reference: Perego, E., Zappone, S., et al. Content-enriched fluorescence lifetime fluctuation spectroscopy to study bio-molecular condensate formation (2023) bioRxiv 2023.06.09.544221; doi: https://doi.org/10.1101/2023.06.09.544221
+Content-enriched fluorescence lifetime fluctuation spectroscopy to study bio-molecular condensate formation (2023) _Perego, E., Zappone, S., et al._  **bioRxiv** 2023.06.09.544221; doi: https://doi.org/10.1101/2023.06.09.544221
+
+It uses BrightEyes-TTM technology.
 ```
 
